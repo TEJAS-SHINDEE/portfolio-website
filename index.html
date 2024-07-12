@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="icon" href="images/icon.svg">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/eaa65abd82.js" 
+            crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- --------------Header-------------------------------------- -->
+    <div id="header">
+        <div class="container">
+            <nav >
+                <img src="images/tt.jpg" class="logo">
+                
+                <ul id="sidemenu">
+                    <li> <a href="#header">Home</a> </li>
+                    <li> <a href="#about">About</a> </li>
+                    <li> <a href="#services">Services</a> </li>
+                    <li> <a href="#portfolio">Portfolio</a> </li>
+                    <li> <a href="#contact">contact</a> </li>
+                    <i class="fas fa-regular fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-solid fa-bars" onclick="openmenu()" ></i>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>Hi, I'm<span> TEJAS SHINDE</span> <br> from Kolhapur</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <!----------------------about--------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png" >
+                </div>
+                
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Currently pursuing my Bachelor's degree in Computer Science at Tatyasaheb Kore Institute of Engineering and Technology, Warananagar.
+                        Looking forward to develop my problem solving skills and knowledge about programming languages in order to become potential programmer.
+                        thanks for reading this far... let's connect.
+                    </p>
+            
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skill's</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li> <span>UI/UX</span> <br> Desiginig web/App interfaces </li>
+                            <li> <span>Web Development</span> <br> web App Development </li>
+                            <li> <span>App development</span> <br> Building Android/ios apps </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li> <span>2021 - current</span> <br> ui /ux design tranning at Institute </li>
+                            <li> <span>2019 - 2021</span> <br> team lead starpup llc </li>
+                            <li> <span>2017 - 2019</span> <br> Internship at ecart ecommerce </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li> <span>2016</span> <br> Desiginig web/App interfaces </li>
+                            <li> <span>2014</span> <br> mba from mit bangalore </li>
+                            <li> <span>2014</span> <br> BBA from ism bangalore </li>
+                        </ul>
+                    </div>
+
+                </div>
+          
+            </div>
+        </div>
+
+    </div>
+
+    <!-----------------services-------------------------------------------------->
+    <div id="services">
+        <div class="container">
+           <h1 class="sub-title">My services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>pursuing my Bachelor's degree in Computer Science at TKIET, Warananagar.</p>
+                    <a href="#">Learn more</a> 
+                    <!-- add link-------- -->
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-alt"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>pursuing my Bachelor's degree in Computer Science at TKIET, Warananagar.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Design</h2>
+                    <p>pursuing my Bachelor's degree in Computer Science at TKIET, Warananagar.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------------portfolio------------------>
+
+    <div id="portfolio">
+
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+
+                <div class="work">
+                    <img src="images/work-1.png">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>pursuing my Bachelor's in Computer Science at TKIET, Warananagar.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <!-- add link   -->
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="images/work-2.png">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>pursuing my Bachelor's in Computer Science at TKIET, Warananagar.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <!-- add link   -->
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="images/work-3.png">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>pursuing my Bachelor's in Computer Science at TKIET, Warananagar.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <!-- add link   -->
+                    </div>
+                </div>
+
+            </div>
+            <a href="#" class="btn">See More</a>
+            <!-- add link   -->
+        </div>
+    </div>
+
+
+    <!-----------contact----------------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <br>
+                    <p><i class="fa-solid fa-paper-plane"></i>  tejasshinde8022@gmail.com</p><br>
+                    <p><i class="fa-sharp fa-solid fa-square-phone"></i> +91 7559198022</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <!-- add link   -->
+                    </div>
+                    <a download="images/TEJAS-BHAGVAN-SHINDE.pdf" target="_blank" class="btn btn2">Download RESUME</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="Submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>Copyright &copy; Tejas. Made with <i class="fa-solid fa-heart"></i> HTML, CSS & JS</p>
+        </div>
+    </div>
+
+<script>
+    let tablinks = document.getElementsByClassName("tab-links");
+    let tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+<script>
+    let sidemenu = document.getElementById("sidemenu");
+    function openmenu() {
+        sidemenu.style.right = "0";
+    }
+    function closemenu()    {
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzpZT6Cm_2S4JTUcWVJzoWueE7ld-6FlVOFxPMEZDSIKRU9edJALp4-CsHDsojqdMdvTQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg");
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },1000);
+            form.reset();
+        })
+        .catch(error => console.error('Error!', error.message))
+    });
+</script>
+
+</body>
+</html>
