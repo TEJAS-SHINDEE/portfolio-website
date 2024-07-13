@@ -1,9 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
 *   {
     margin:0;
     padding:0;
     font-family:'poppins','sans-serif';
     box-sizing:border-box;
 } 
+
+.logo {
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: 700;
+    padding: 8px ;
+}
+
+.logo span{
+    color:#ff004f
+}
 
 html    {
     scroll-behavior: smooth;
@@ -17,14 +30,14 @@ body    {
 #header {
     width:100%;
     height:100vh;
-    background-image: url("images/tejas.jpg");
+    /* background-image: url("images/tejas.jpg"); */
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .container  {   
-    padding:10px 10%;
+    padding:20px 6%;
 }
 
 nav {
@@ -32,12 +45,7 @@ nav {
     align-items:center;
     justify-content: space-between;
     flex-wrap: wrap;
-
-}
-
-.logo   {
-    width:140px;
-
+    width: 100%;
 }
 
 nav ul li   {
@@ -50,6 +58,7 @@ nav ul li a {
     color:#fff;
     text-decoration: none;
     font-size:18px;
+    font-weight: 500;
     position: relative;
 }
 
@@ -68,11 +77,18 @@ nav ul li a:hover::after    {
     width:100%;
 }
 
-.header-text    {
-    margin-top:20%;
-    font-size:30px;
-}
+.header-text {
+    margin-top: 10%;
+    padding-left: 8px;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
 
+}
 .header-text h1 {
     font-size: 60px;
     margin-top: 20px;
@@ -80,6 +96,104 @@ nav ul li a:hover::after    {
 
 .header-text h1 span{
     color:#ff004f
+}
+
+.header-text.intro  {
+    font-size: 27px;
+}
+
+
+.header-text .max-width {
+    width: 100%;
+    display: flex;
+}
+
+.header-text .max-width .row {
+    margin-right: 0;
+}
+
+.header-text .home-content .text-1 {
+    font-size: 27px;
+}
+
+.header-text .home-content .text-2 {
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.header-text .home-content .animated-text {
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.header-text .home-content .animated-text span {
+    color: rgb(220, 20, 60);
+    font-weight: 500;
+}
+
+
+/* ---------typing effect------------- */
+
+.animated-text  {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.animated-text span {
+    position: relative;
+}
+
+.animated-text span::before {
+    content: "Student";
+    color: #ff004f;
+    animation : words 20s infinite;
+}
+
+.animated-text span::after  {
+    content:'';
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 2px solid #ff004f;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s, steps(14) infinite; 
+    
+}
+
+@keyframes cursor {
+    to {
+        border-left: 2px solid #ff004f;
+    }
+}
+
+@keyframes words {
+    0%,20%  {
+        content: 'Student';
+    }
+    21%,40%  {
+        content: 'Developer';
+    }
+    41%,60%  {
+        content: 'Engineer';
+    }
+    61%,80%  {
+        content: 'Designer';
+    }
+    81%,100%  {
+        content: 'Freelancer';
+    }
+}
+
+@keyframes  typing  {
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%    {
+        width: 0;
+    }
+
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%  {
+        width: calc(100% + 8px);
+    }
 }
 
 /*------about---------*/
@@ -160,20 +274,20 @@ nav ul li a:hover::after    {
     display: block;
 }
 
-/* --------services--------- */
+/* --------projects--------- */
 
-#services   {
+#projects   {
     padding: 30px 0;
 }
 
-.services-list  {
+.projects-list  {
     display:grid;
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     grid-gap:40px;
     margin-top: 50px;
 }
 
-.services-list div  {
+.projects-list div  {
     background: #262626;
     padding: 40px;
     font-size: 13px;
@@ -182,18 +296,18 @@ nav ul li a:hover::after    {
     transition: background 0.5s, transform 0.5s;
 }
 
-.services-list div i    {   
+.projects-list div i    {   
     font-size: 50px;
     margin-bottom: 30px;
 }
 
-.services-list div h2   {
+.projects-list div h2   {
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 15px;
 }
 
-.services-list div a    {
+.projects-list div a    {
     text-decoration: none;
     color:#fff;
     font-size: 14px;
@@ -201,7 +315,7 @@ nav ul li a:hover::after    {
     display: inline-block; 
 }
 
-.services-list div:hover{
+.projects-list div:hover{
     background:#ff004f ;
     transform: translateY(-10px);
 }

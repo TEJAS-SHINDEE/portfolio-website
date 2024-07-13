@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
-    <link rel="icon" href="images/icon.svg">
+    <title>Tejas Shinde</title>
+    <link rel="icon" href="images/icont2.png">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/eaa65abd82.js" 
             crossorigin="anonymous"></script>
@@ -16,21 +16,32 @@
     <div id="header">
         <div class="container">
             <nav >
-                <img src="images/tt.jpg" class="logo">
-                
+                <!-- <img src="images/tt.jpg" class="logo"> -->
+                <div class="logo">Tejas<span> Shinde.</span></div>
+
                 <ul id="sidemenu">
                     <li> <a href="#header">Home</a> </li>
                     <li> <a href="#about">About</a> </li>
-                    <li> <a href="#services">Services</a> </li>
+                    <li> <a href="#skills">Skill's</a> </li>
+                    <li> <a href="#projects">Project's</a> </li>
                     <li> <a href="#portfolio">Portfolio</a> </li>
-                    <li> <a href="#contact">contact</a> </li>
+                    <li> <a href="#contact">Contact</a> </li>
                     <i class="fas fa-regular fa-circle-xmark" onclick="closemenu()"></i>
                 </ul>
                 <i class="fas fa-solid fa-bars" onclick="openmenu()" ></i>
             </nav>
+
             <div class="header-text">
-                <p>UI/UX Designer</p>
-                <h1>Hi, I'm<span> TEJAS SHINDE</span> <br> from Kolhapur</h1>
+                <!-- <p>UI/UX Designer</p>
+                <h1>Hi, I'm<span> TEJAS SHINDE</span> <br> from Kolhapur</h1> -->
+                    <div class="max-width">
+                        <div class="home-content">
+                            <div class="text-1">Hello, my name is</div>
+                            <div class="text-2">Tejas Shinde</div>
+                            <div class="animated-text">And I'm <span></span></div>
+                            <!-- <a href="#contact">Hire me</a> -->
+                        </div>
+                    </div>
             </div>
         </div>
     </div>
@@ -41,7 +52,7 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="images/tejas.jpg" >
+                    <img src="" >
                 </div>
                 
                 <div class="about-col-2">
@@ -88,11 +99,18 @@
 
     </div>
 
-    <!-----------------services-------------------------------------------------->
-    <div id="services">
+    <!-- ---------skill's----------->
+    <div id="skills">   
         <div class="container">
-           <h1 class="sub-title">My services</h1>
-            <div class="services-list">
+            <h1 class="sub-title">Skill's</h1>
+        </div>
+    </div>
+
+    <!-----------------services-------------------------------------------------->
+    <div id="projects">
+        <div class="container">
+           <h1 class="sub-title">My Project's</h1>
+            <div class="projects-list">
                 <div>
                     <i class="fa-solid fa-code"></i>
                     <h2>Web Design</h2>
@@ -196,48 +214,7 @@
         </div>
     </div>
 
-<script>
-    let tablinks = document.getElementsByClassName("tab-links");
-    let tabcontents = document.getElementsByClassName("tab-contents");
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
-</script>
-<script>
-    let sidemenu = document.getElementById("sidemenu");
-    function openmenu() {
-        sidemenu.style.right = "0";
-    }
-    function closemenu()    {
-        sidemenu.style.right = "-200px";
-    }
-</script>
-
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzpZT6Cm_2S4JTUcWVJzoWueE7ld-6FlVOFxPMEZDSIKRU9edJALp4-CsHDsojqdMdvTQ/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg");
-
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML="Message sent successfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            },1000);
-            form.reset();
-        })
-        .catch(error => console.error('Error!', error.message))
-    });
-</script>
+    <script src="./index.js"></script>
 
 </body>
 </html>
